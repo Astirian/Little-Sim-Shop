@@ -9,6 +9,7 @@ public class StateManager : MonoBehaviour
     public static StateManager core;
     public bool gameStarted = false;
     public UIView mainMenu;
+    public float menuMusicVolume = 0.25f;
 
     void Awake()
     {
@@ -17,7 +18,7 @@ public class StateManager : MonoBehaviour
 
     void Start()
     {
-        
+       MusicManager.core.PlayMusic(MusicManager.core.trackList[0], menuMusicVolume);
     }
 
     void Update()
